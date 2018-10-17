@@ -1,8 +1,13 @@
-<ul>
-<li *ngFor="let user of friends; let i=index">
+<br><br><input type="text" placeholder="Buscar amigo" [(ngModel)]="query">
+<br>
+<strong>Amigos</strong>
+<ng-container *ngFor="let user of friends | search:query; let i=index">
+  <div>
+  <a routerLink="/conversation/{{user.uid}}">
 {{i}}---{{user.nick}} - {{user.email}} - {{user.age}}
 
-</li>
+</a>
+  </div>
+</ng-container>
 
 
-</ul>

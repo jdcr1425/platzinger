@@ -4,7 +4,7 @@
 <ng-container *ngFor="let user of friends | search:query; let i=index">
   <div>
   <a routerLink="/conversation/{{user.uid}}">
-{{i}}---{{user.nick}} - {{user.email}} - {{user.age}}
+{{i}}---<img width="40" src="../../assets/img/logo_live_{{user.status}}.png">{{user.nick}} - {{user.email}} - {{user.age}}
 
 </a>
   </div>
